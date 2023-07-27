@@ -1,7 +1,7 @@
 import './globals.css'
+import Image from 'next/image';
 import { Varela_Round } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
-
 export const metadata = {
   title: 'taskee',
   description: 'Task Manager',

@@ -6,11 +6,12 @@ import { useRouter } from "next/navigation";
 const Logo = () => {
     const router = useRouter();
     return ( 
-        <Image 
+        <Image
+            className="image-container" 
             alt = "Logo"
-            height="100"
-            width= "100"
-            src="/images/logo.png"
+            height="61"
+            width= "61"
+            src="/images/taskee_logo.svg"
         />
      );
 }
