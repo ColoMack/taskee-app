@@ -38,36 +38,81 @@ body{
 }
 
 /* For the menu options inside the sidbar menu.. */
-.outer-div{
+.outer-div-1{
     border-top: solid 1px #DDDDDD;
     border-bottom: solid 1px #DDDDDD;
-    margin: 2rem 0 0 0;
-    padding: 0 0 2rem 0;
+    padding: 1rem 0 1.5rem 0;
     width: 98.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.outer-div-2{
+    margin: 0 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.sidebar-item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 0 1rem;
+}
+.third-child{
+    padding: 0 0 0 6px;
+    gap: 16px;
 }
 .sidebar-items{
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 0 0;
-    gap: 0.4rem;
+    margin: 1rem 0 0 0;
+    gap: 1rem;
 }
 .sidebar-items a{
     text-decoration: none;
+}
+.sidebar-items .side-bar-link{
     display: flex;
     flex-direction: row;
     border-radius: 0.3125rem;
     background: #ffffff;
-    box-shadow: 0px 2px 6px 0px rgba(175, 185, 196, 0.50);
     align-items: center;
-    gap: 10px;
     margin: 0 0 0 1.5rem;
     width: 17.4rem;
     height: 3.7rem;
+
+    /* box-shadow: 0px 2px 6px 0px rgba(175, 185, 196, 0.50); */
+}
+.sidebar-button{
+    width: 280px;
+    height: 59px;
+    border-radius: 8px;
+    background: #7AA5D2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 0 1rem;
+}
+.sidebar-button .sidebar-button-name{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
 }
 .sidebar-icon{
     width: auto;
     height: auto;
 }
+.sidebar-button-icon{
+    width: auto;
+    height: auto;
+}
+
 .sidebar-name{
     color: #C1C1C1;
     /* font-family: 'Varela Round', sans-serif; */
@@ -75,4 +120,11 @@ body{
     font-style: normal;
     /* font-weight: 400; */
     line-height: normal;
+}
+
+.logout-cont{
+    margin: 75% 0 3% 4%;
+}
+.logout-cont .sidebar-name{
+    color: rgb(107, 107, 107);
 }

@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Image from "next/image";
 import Menu_Item from "./MenuItem";
 import FullLogo from "./FullLogo";
+import Logout from "./LogoutButton";
 
 const Navbar = () => {
     return (
@@ -14,6 +15,9 @@ const Navbar = () => {
 
             {/* <Menu_Item /> */}
             <Menu_Item/>
+
+            {/* For the logout button.. */}
+            <Logout />
         </div>
     );
 }
