@@ -14,9 +14,12 @@ body{
 .navbar-div{
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #F3F3F3;
+    align-items: center;
+    border-right: 1px solid #dddddd;
     width: 20rem;
-    height: auto;
+    height: 100vh;
+    position: relative;
+    transition: width 0.05s ease-in;
 }
 
 /* For the logo and the name */
@@ -42,7 +45,7 @@ body{
     border-top: solid 1px #DDDDDD;
     border-bottom: solid 1px #DDDDDD;
     padding: 1rem 0 1.5rem 0;
-    width: 98.5%;
+    width: 95.5%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -53,6 +56,28 @@ body{
     flex-direction: column;
     gap: 2rem;
 }
+
+.horizontal-line{
+    border-top: solid 1px #b1b1b1;
+    width: 65%;
+}
+
+.chevron-cont{
+    cursor: pointer;
+    border: solid 1px #DDDDDD;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 4.9rem;
+    right: 0%;
+    transform: translateX(50%);
+    background-color: white;
+}
+
 .sidebar-item-container{
     display: flex;
     flex-direction: row;
@@ -67,26 +92,28 @@ body{
 .sidebar-items{
     display: flex;
     flex-direction: column;
-    margin: 1rem 0 0 0;
+    margin: 1rem 1rem 0 0.7rem;
     gap: 1rem;
+    position: relative;
 }
 .sidebar-items a{
     text-decoration: none;
 }
-.sidebar-items .side-bar-link{
+.sidebar-link{
     display: flex;
     flex-direction: row;
     border-radius: 0.3125rem;
     background: #ffffff;
     align-items: center;
-    margin: 0 0 0 1.5rem;
-    width: 17.4rem;
+    margin: 0 0 0 0;
     height: 3.7rem;
 
-    /* box-shadow: 0px 2px 6px 0px rgba(175, 185, 196, 0.50); */
+    /* This will be included when the button is active.. */
+    /* border: solid 1px rgba(212, 219, 227, 0.5); */
+    /* box-shadow: 0px 0px 4px 0px rgba(204, 211, 218, 0.5); */
 }
 .sidebar-button{
-    width: 280px;
+    width: 100%;
     height: 59px;
     border-radius: 8px;
     background: #7AA5D2;
@@ -95,7 +122,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 0rem;
 }
 .sidebar-button .sidebar-button-name{
     color: #FFF;
@@ -114,7 +141,7 @@ body{
 }
 
 .sidebar-name{
-    color: #C1C1C1;
+    color: rgb(107, 107, 107);
     /* font-family: 'Varela Round', sans-serif; */
     font-size: 1.15rem;
     font-style: normal;
@@ -123,8 +150,28 @@ body{
 }
 
 .logout-cont{
-    margin: 75% 0 3% 4%;
+    margin: 10rem 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 .logout-cont .sidebar-name{
     color: rgb(107, 107, 107);
+}
+
+/* This is what happens when the sidebar is minimized.. */
+[data-collapse = 'true']{
+    width: 6rem;
+    transition: width 0.2s ease-in-out;
+}
+
+[data-collapse = 'true'] .sidebar-name{
+    display: none;
+}
+
+[data-collapse = 'true'] .sidebar-button-name{
+    display: none;
+}
+
+[data-collapse = 'true'] .logo-text{
+    display: none;
 }
