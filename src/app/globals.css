@@ -29,7 +29,6 @@ body{
     align-items: center;
     height: fit-content;
     width: fit-content;
-    margin: 1rem 0 0 1rem;
     gap: 0.44rem;
 }
 .logo-text{
@@ -174,4 +173,81 @@ body{
 
 [data-collapse = 'true'] .logo-text{
     display: none;
+}
+
+
+/* For the auth page, (ie..Login and sign up pages) */
+
+/* layout.tsx.. */
+
+.whole-cont{
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.left-cont-side{
+    border-right: solid 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.right-cont-side{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.right-cont-side .template-div{
+    width: 100%;
+    height: 99%;
+    margin-right: 0.3rem;
+    border-radius: 20px;
+    background-color: #E6F2FF;
+    flex-direction: column;
+    display: flex;
+    align-items: center;  
+}
+
+/* page.tsx.. */
+.login-details-cont{
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+.email-div, .pass-div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.email-cont, .pass-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 1px #CBD9E7;
+    width: 29rem;
+    height: 3.5rem;
+    border-radius: 0.63rem;
+}
+.login-details-cont .input-deets input{
+    color: #7AA5D2;
+    font-size: 105%; 
+}
+.login-details-cont .input-deets input::placeholder{
+    color: #CBD9E7;
+}
+.separator-or-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator-or-div .sp:nth-child(1){
+    width: 11.5625rem;
+    height: 0.0625rem;
+    background: linear-gradient(359deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
+}
+.separator-or-div .sp:nth-child(3){
+    width: 12rem;
+    height: 0.0625rem;
+    background: linear-gradient(100deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
 }

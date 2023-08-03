@@ -19,7 +19,7 @@ const Navbar = () => {
             {/* This is the container for the taskee logo */}
             <div style={{ border:"none 1px", width: "100%",height:"fit-content", display:"flex" }}>
                 <Container>
-                    <div className="logo-cont">
+                    <div style={{margin:"1rem 0 0 1rem"}} className="logo-cont">
                         <Logo/>
 
                         {/* The logo text */}
