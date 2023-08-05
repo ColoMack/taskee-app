@@ -1,16 +1,29 @@
+'use client';
+
 import Image from 'next/image'
-import Navbar from './components/navbar/Navbar'
+
+import { useCallback, useState } from "react";
+import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
+import AuthForm from './components/AuthForm';
+
 
 export default function Home() {
   return (
     // This is where the login page is...
 
     <>
-      <div>
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-          <span style={{fontSize:"200%"}}>Welcome Back !</span>
-          <span style={{margin:"0.5rem 0 0 0", color:"#839CB6", fontSize:"16px"}}>Log in now and unlock exclusive access.</span>
+      <div style={{display:"flex", flexDirection:"column"}}>
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center", marginBottom:"1.5rem"}}>
+          <span style={{fontSize:"2.5rem"}}>Welcome Back !</span>
+          <span style={{color:"#839CB6", fontSize:"16px"}}>Log in now and unlock exclusive access.</span>
         </div>
+        <AuthForm />
+      </div>
+
+
+    {/* Trying something new and different which is more efficient than the code below... */}
+      {/* <div>
+        
 
         <div className='login-details-cont'>
           <div className='email-div'>
@@ -53,11 +66,12 @@ export default function Home() {
 
           <div style={{display:"flex", justifyContent:"center"}}>
             <div>
-              <span>Create a new Account ? <a style={{color:"#7AA5D2"}}>Sign up.</a></span>
+              <span>Create a new Account ? <a href='' style={{color:"#7AA5D2", textDecoration:"none"}}>Sign up.</a></span>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
     </>
   )
 }

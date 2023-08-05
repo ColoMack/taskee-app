@@ -34,8 +34,8 @@ export default function RootLayout({
             {/* This is where the layout of the root page will be.. */}
 
             <>
-              <div style={{display:"flex", flexDirection:"row"}} className='whole-cont'>
-                <div style={{width:"50%", }}>
+              <div className='bg-white h-screen flex flex-row '>
+                <div className='w-6/12'>
                   <div className='left-cont-side'>
                     <div>
                       <div style={{height:"fit-content", width:"fit-content"}}>
@@ -59,7 +59,7 @@ export default function RootLayout({
                 </div>
 
                 <div style={{width:"50%", }}>
-                  <div className='right-cont-side'>
+                  <div className='h-screen flex items-center'>
                     <div className='template-div'>
                       <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
                         <span style={{margin:"2.5rem 0 0 0", fontSize:"250%"}}>Welcome to <span style={{color:"#7AA5D2"}}>taskee.</span></span>
