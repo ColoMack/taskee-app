@@ -66,8 +66,8 @@ const AuthForm = () => {
     }
 
     return (
-        <div style={{}} className="sm:mx-auto sm:w-full sm:max-w-md">
-            <div style={{width:"100%"}} className="bg-white py-8 shadow sm:rounded-lg sm:px-8">
+        <div style={{}} className="sm:mx-auto sm:w-full sm:max-w-md border-0 shadow-md border-indigo-100 rounded-md">
+            <div style={{width:"100%"}} className="bg-white py-8 sm:rounded-lg sm:px-8">
                 {/* in this form tag, the function after onSubmit is used to trigger the submit function and also pass the data values which are inside the form.. */}
                 
 
@@ -79,7 +79,7 @@ const AuthForm = () => {
                     )}
 
                     {/* This is the otherwise condition..which is for login page.. */}
-                    <Input id="email" label="Email" type="email" disabled={isLoading} register={register} errors={errors} />
+                    <Input id="email" label="Email Address" type="email" disabled={isLoading} register={register} errors={errors} />
                     <Input id="password" label="Password" type="password" disabled={isLoading} register={register} errors={errors} />
 
                     <div style={{marginTop:"1rem"}}>
@@ -88,7 +88,7 @@ const AuthForm = () => {
                             fullWidth
                             type="submit"
                         >
-                            {variant == 'LOGIN' ? 'Sign in': 'Register'}
+                            {variant == 'LOGIN' ? 'Login': 'Create Account'}
                         </Button>
                     </div>
                     
@@ -130,7 +130,7 @@ const AuthForm = () => {
                     <div>
                         {variant === 'LOGIN' ? 'New to taskee?' : 'Already have and Account ?'}
                     </div>
-                    <div onClick={toggleVariant} className="underline cursor-pointer">
+                    <div style={{color:"#7AA5D2"}} onClick={toggleVariant} className="cursor-pointer">
                         {variant === 'LOGIN' ? 'Create an account' : 'Log in'}
                     </div>
                 </div>
