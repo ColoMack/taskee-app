@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  // these are the data values that will be stored in the user db..
+  // this is the id that i'll use in all of the models..
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String?
+  email String? @unique
+  emailVerified DateTime?
+  image String?
+  hashedPassword String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // some relations..
+  // taskIds String[] @db.ObjectId
+  // tasknames TaskName[] @relation(fields: [taskIds], references: [id])
+
+
+  // relations with other tables..
+  accounts Account[]
+  tasks Task[]
+  taskTags TaskTag[]
+
+}
+
+
+// this model is for social signups and logins..
+// all these field are a must if using social authentication..
+model Account {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId
+  type String
+  provider String
+  providerAccountId String
+  refresh_token String? @db.String
+  access_token String? @db.String
+  expires_at Int?
+  token_type String?
+  scope String?
+  id_token String? @db.String
+  session_state String?
+
+  // this creates a relationship with the user model using the userId field in the account model and references to the id field in the User model..
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // creates a unique combination of the these two fields..
+  @@unique([provider, providerAccountId])
+}
+
+model Task {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  description String
+  attachmentURL String
+  duedate DateTime
+  status String
+  createdAt DateTime
+  updatedAt DateTime
+  priority String
+  userId String @db.ObjectId
+
+  // the userId will reference to the id field in the user model..
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  taskTags TaskTag[]
+}
+
+model TaskTag {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId
+  taskId String @db.ObjectId
+  tagname String
+  createdAt DateTime
+  updatedAt DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
