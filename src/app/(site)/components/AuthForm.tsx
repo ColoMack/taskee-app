@@ -3,25 +3,37 @@
 import axios from "axios";
 import Image from "next/image";
 import Input from "@/app/components/inputs/Input";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import Button from "@/app/components/Button";
 import AuthSocialButton from "./AuthSocialButton";
 import { BsGithub, BsGoogle } from 'react-icons/bs';
 import { toast } from "react-hot-toast";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 
 // This is used for the functionality of switching between login and sign up forms..
 type Variant = 'LOGIN' | 'REGISTER';
 
 const AuthForm = () => {
-
+    // session hook to get the session status..
+    const session = useSession();
     // The default state of the auth form is login stage..
+
+    const router = useRouter();
     const [variant, setVariant] = useState<Variant>('LOGIN');
 
     // this is for disabling buttons and inputs after submiting the form..
     const [isLoading, setIsLoading] = useState(false);
+
+    // used to check if the current session status is authenticated..
+    useEffect(() => {
+        if (session?.status === 'authenticated') {
+            // if the user is authenticated, then we need to route him to another page..
+            router.push('/users');
+        }
+    }, [session?.status, router]);
     
     // function that is used to toggle between login and sign up forms..
     const toggleVariant = useCallback(() => {
