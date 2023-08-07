@@ -23,11 +23,6 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  // some relations..
-  // taskIds String[] @db.ObjectId
-  // tasknames TaskName[] @relation(fields: [taskIds], references: [id])
-
-
   // relations with other tables..
   accounts Account[]
   tasks Task[]

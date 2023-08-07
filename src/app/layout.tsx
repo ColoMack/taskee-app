@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import ClientOnly from './components/ClientOnly';
 import Container from './components/Container';
 import Logo from './components/navbar/Logo';
+import ToasterContext from './context/ToasterContext';
 
 // This is the metadata for the whole site..
 export const metadata = {
@@ -52,6 +53,8 @@ export default function RootLayout({
                         {/* This is where the children props should be put... */}
 
                         {/* this is what will be rendered inside the layout..(page.tsx) */}
+
+                        <ToasterContext />
                         {children}
                       </div>
                     </div>
