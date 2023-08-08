@@ -1,6 +1,6 @@
 'use client';
 
-import '../globals.css'
+
 import Image from 'next/image';
 import Container from '../components/Container';
 import Logo from '../components/navbar/Logo';
