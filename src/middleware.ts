@@ -1,6 +1,6 @@
 // this is to protect the routes..
 
-import { withAuth } from "next-auth/middleware";
+import withAuth  from "next-auth/middleware";
 
 export default withAuth({
     pages: {
@@ -9,5 +9,7 @@ export default withAuth({
 });
 
 export const config = {
-    matcher: "/users/:path*",
+    matcher: [
+        "/home/:path*"
+    ]
 };

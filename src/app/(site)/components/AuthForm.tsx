@@ -31,7 +31,7 @@ const AuthForm = () => {
     useEffect(() => {
         if (session?.status === 'authenticated') {
             // if the user is authenticated, then we need to route him to another page..
-            router.push('/users');
+            router.push('/home');
         }
     }, [session?.status, router]);
     
@@ -85,7 +85,7 @@ const AuthForm = () => {
 
                 if (callback?.ok && !callback?.error) {
                     toast.success('Logged in!');
-                    router.push('/users');
+                    router.push('/home');
                 }
             }).finally(() => setIsLoading(false));
         }

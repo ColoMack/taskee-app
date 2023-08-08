@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "../Container";
 import Logo from "./Logo";
 import Image from "next/image";
+import { signOut } from "next-auth/react";
 
 const Navbar = () => {
 
@@ -104,21 +105,22 @@ const Navbar = () => {
                             </div>
                         </a>
                     </div>
-
+                    
+                    {/* For the logout button.. */}
                     <div style={{marginRight: "0rem"}} className="sidebar-items logout-cont">
-                        <a href="/" className="sidebar-link">
+                        <button onClick={() => signOut()} className="sidebar-link">
                             <div className="sidebar-item-container">
                                 <span className="sidebar-icon">
                                     <Image src="/images/logoutIcon.svg" height={35} width={35} alt="Logout" />  
                                 </span>
                                 <span className="sidebar-name">Logout</span>
                             </div>
-                        </a>
+                        </button>
                     </div>
                 </ul>
             </div>
 
-            {/* For the logout button.. */}
+            
             <div>
                 
             </div>
