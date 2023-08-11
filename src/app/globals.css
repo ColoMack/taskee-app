@@ -252,3 +252,17 @@ body{
     height: 0.0625rem;
     background: linear-gradient(359deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
 }
+
+
+/* this is for the topbar section.. */
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 4rem;
+    position: absolute;
+    right: 0%;
+    padding-right: 1rem;
+}

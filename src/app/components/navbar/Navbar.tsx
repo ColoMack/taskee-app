@@ -34,7 +34,7 @@ const Navbar = () => {
             </div>
 
             {/* The circle containing the chevron */}
-            <div style={{  }} className="chevron-cont" onClick={toggleSidebarCollapseHandler}>
+            <div style={{zIndex:"1"}} className="chevron-cont" onClick={toggleSidebarCollapseHandler}>
                 <Image src="/images/chevronLeft.svg" height={15} width={15} alt="Minimize-Menu" />
             </div>
 

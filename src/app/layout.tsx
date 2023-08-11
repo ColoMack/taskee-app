@@ -1,7 +1,6 @@
 import './globals.css'
 import { Varela_Round } from "next/font/google";
 import ClientOnly from './components/ClientOnly';
-import Container from './components/Container';
 import ToasterContext from './context/ToasterContext';
 import AuthContext from './context/AuthContext';
 
@@ -23,6 +22,7 @@ export default function RootLayout({
   }: {
     children: React.ReactNode
   }) {
+
     return (
       <html lang="en">
         <body className={font.className}>
