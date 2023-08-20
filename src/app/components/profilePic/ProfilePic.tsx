@@ -5,9 +5,16 @@ import Avatar from '@/app/components/avatar/Avatar'
 import { useState, useCallback } from "react";
 import Menuitem from "./Menuitem";
 import { signOut } from "next-auth/react";
+import { User } from "@prisma/client";
 
+interface ProfileProps {
+    currentUser?: User | null;
+}
 
-const ProfilePic = () => {
+const ProfilePic: React.FC<ProfileProps>= ({
+    currentUser
+}) => {
+    console.log({ currentUser })
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +48,8 @@ const ProfilePic = () => {
                     text-sm
                 ">
                     <div className="flex flex-col cursor-pointer">
-                        <>
+                        {currentUser ? (
+                            <>
                             <Menuitem 
                                 onClick={() => {}}
                                 label="Settings"
@@ -52,6 +60,20 @@ const ProfilePic = () => {
                                 label="Log Out"
                             />
                         </>
+                        ):(
+                            <>
+                                <Menuitem 
+                                    onClick={() => {}}
+                                    label="Login"
+                                />
+
+                                <Menuitem 
+                                    onClick={() => {}}
+                                    label="Signup"
+                                />
+                            </>
+                        )}
+                        
                     </div>
                 </div>
 
