@@ -266,3 +266,28 @@ body{
     right: 0%;
     padding-right: 1rem;
 }
+
+/* This is for the div that has content which you can scroll..  */
+.outer-task-scroll-div {
+    border: none 1px red;
+    overflow-y: auto;
+    height: 41.2rem;
+    display: flex;
+    flex-direction: column;
+    background:#F6F6F6;
+    padding: 2.5rem 2.38rem; 
+}
+::-webkit-scrollbar {
+    width: 0.8rem;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #F6F6F6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(176, 176, 176);
+    border-radius: 100vw;
+    border-right: solid 2px rgb(224, 224, 224);
+}

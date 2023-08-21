@@ -1,5 +1,5 @@
 
-import RightContentBox from '../components/RIghtContentBox/RIghtContentBox';
+import RightContentBox from '../components/RIghtContentBox/RightContentBox';
 import Navbar from '../components/navbar/Navbar';
 
 
