@@ -5,6 +5,7 @@ import Container from "../Container";
 import Logo from "./Logo";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
 
@@ -40,11 +41,14 @@ const Navbar = () => {
 
             {/* <Menu_Item /> */}
             <div style={{ width:"100%"}}>
+
+                <Sidebar />
+
                 {/* list of the menu options.. */}
-                <ul className="sidebar-items">
+                {/* <ul className="sidebar-items">
                     
                     <div>
-                        <a href="/" className="sidebar-link">
+                        <a href="" className="sidebar-link">
                             <div className="sidebar-item-container">
                                 <span className="sidebar-icon">
                                     <Image src="/images/dashboardIcon.svg" height={36} width={36} alt="Dashboard" />  
@@ -75,7 +79,7 @@ const Navbar = () => {
                             </div>
                         </a>
                     </div>    
-                </ul>
+                </ul> */}
             </div>
 
             <div style={{ width:"100%", display:"flex", justifyContent:"center", margin:"1rem 0 0 0" }}>

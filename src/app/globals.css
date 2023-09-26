@@ -1,182 +1,256 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+ 
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+ 
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+ 
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+ 
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+ 
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+ 
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+ 
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+ 
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+ 
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+ 
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+ 
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 
 /* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */
 
 *{
-    padding: 0;
-    margin: 0;
-    
+  padding: 0;
+  margin: 0;
+  
 }
 
 body{
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 /* This is for the div that contains the sidebar + logo */
 .navbar-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: 1px solid #dddddd;
-    width: 20rem;
-    height: 100vh;
-    position: relative;
-    transition: width 0.05s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #dddddd;
+  width: 20rem;
+  height: 100vh;
+  position: relative;
+  transition: width 0.05s ease-in;
 }
 
 /* For the logo and the name */
 .logo-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: fit-content;
-    width: fit-content;
-    gap: 0.44rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  gap: 0.44rem;
 }
 .logo-text{
-    color: #7AA5D2;
-    font-size: 2.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #7AA5D2;
+  font-size: 2.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* For the menu options inside the sidbar menu.. */
 .outer-div-1{
-    border-top: solid 1px #DDDDDD;
-    border-bottom: solid 1px #DDDDDD;
-    padding: 1rem 0 1.5rem 0;
-    width: 95.5%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  border-top: solid 1px #DDDDDD;
+  border-bottom: solid 1px #DDDDDD;
+  padding: 1rem 0 1.5rem 0;
+  width: 95.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .outer-div-2{
-    margin: 0 0 0 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  margin: 0 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .horizontal-line{
-    border-top: solid 1px #b1b1b1;
-    width: 65%;
+  border-top: solid 1px #b1b1b1;
+  width: 65%;
 }
 
 .chevron-cont{
-    cursor: pointer;
-    border: solid 1px #DDDDDD;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: absolute;
-    top: 4.9rem;
-    right: 0%;
-    transform: translateX(50%);
-    background-color: white;
+  cursor: pointer;
+  border: solid 1px #DDDDDD;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 4.9rem;
+  right: 0%;
+  transform: translateX(50%);
+  background-color: white;
 }
 
 .sidebar-item-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 0 1rem;
 }
 .third-child{
-    padding: 0 0 0 6px;
-    gap: 16px;
+  padding: 0 0 0 6px;
+  gap: 16px;
 }
 .sidebar-items{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem 0 0.7rem;
-    gap: 1rem;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem 0 0.7rem;
+  gap: 1rem;
+  position: relative;
 }
 .sidebar-items a{
-    text-decoration: none;
+  text-decoration: none;
 }
 .sidebar-link{
-    display: flex;
-    flex-direction: row;
-    border-radius: 0.3125rem;
-    background: #ffffff;
-    align-items: center;
-    margin: 0 0 0 0;
-    height: 3.7rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.3125rem;
+  background: #ffffff;
+  align-items: center;
+  margin: 0 0 0 0;
+  height: 3.7rem;
 
-    /* This will be included when the button is active.. */
-    /* border: solid 1px rgba(212, 219, 227, 0.5); */
-    /* box-shadow: 0px 0px 4px 0px rgba(204, 211, 218, 0.5); */
+  /* This will be included when the button is active.. */
+  /* border: solid 1px rgba(212, 219, 227, 0.5); */
+  /* box-shadow: 0px 0px 4px 0px rgba(204, 211, 218, 0.5); */
 }
 .sidebar-button{
-    width: 100%;
-    height: 59px;
-    border-radius: 8px;
-    background: #7AA5D2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 0 0 0rem;
+  width: 100%;
+  height: 59px;
+  border-radius: 8px;
+  background: #7AA5D2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 0 0rem;
 }
 .sidebar-button .sidebar-button-name{
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal; 
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
 }
 .sidebar-icon{
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 .sidebar-button-icon{
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 
 .sidebar-name{
-    color: rgb(107, 107, 107);
-    /* font-family: 'Varela Round', sans-serif; */
-    font-size: 1.15rem;
-    font-style: normal;
-    /* font-weight: 400; */
-    line-height: normal;
+  color: rgb(107, 107, 107);
+  /* font-family: 'Varela Round', sans-serif; */
+  font-size: 1.15rem;
+  font-style: normal;
+  /* font-weight: 400; */
+  line-height: normal;
 }
 
 .logout-cont{
-    margin: 10rem 0 0 0;
-    display: flex;
-    justify-content: center;
+  margin: 10rem 0 0 0;
+  display: flex;
+  justify-content: center;
 }
 .logout-cont .sidebar-name{
-    color: rgb(107, 107, 107);
+  color: rgb(107, 107, 107);
 }
 
 /* This is what happens when the sidebar is minimized.. */
 [data-collapse = 'true']{
-    width: 6rem;
-    transition: width 0.2s ease-in-out;
+  width: 6rem;
+  transition: width 0.2s ease-in-out;
 }
 
 [data-collapse = 'true'] .sidebar-name{
-    display: none;
+  display: none;
 }
 
 [data-collapse = 'true'] .sidebar-button-name{
-    display: none;
+  display: none;
 }
 
 [data-collapse = 'true'] .logo-text{
-    display: none;
+  display: none;
 }
 
 
@@ -186,83 +260,83 @@ body{
 
 
 .left-cont-side{
-    border-right: solid 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 2rem 1rem 2rem;
+  border-right: solid 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .right-cont-side{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .template-div{
-    width: 100%;
-    height: 99%;
-    margin-right: 0.3rem;
-    border-radius: 20px;
-    background-color: #E6F2FF;
-    flex-direction: column;
-    display: flex;
-    align-items: center;  
+  width: 100%;
+  height: 99%;
+  margin-right: 0.3rem;
+  border-radius: 20px;
+  background-color: #E6F2FF;
+  flex-direction: column;
+  display: flex;
+  align-items: center;  
 }
 
 /* page.tsx.. */
 .login-details-cont{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap:1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
 }
 .name-div, .email-div, .pass-div{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .name-cont, .email-cont, .pass-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: solid 1px #CBD9E7;
-    width: 29rem;
-    height: 3.5rem;
-    border-radius: 0.63rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1px #CBD9E7;
+  width: 29rem;
+  height: 3.5rem;
+  border-radius: 0.63rem;
 }
 .login-details-cont .input-deets input{
-    color: #7AA5D2;
-    font-size: 105%; 
+  color: #7AA5D2;
+  font-size: 105%; 
 }
 .login-details-cont .input-deets input::placeholder{
-    color: #CBD9E7;
+  color: #CBD9E7;
 }
 .separator-or-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .separator-or-div .sp:nth-child(1){
-    width: 11.5625rem;
-    height: 0.0625rem;
-    background: linear-gradient(100deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
+  width: 11.5625rem;
+  height: 0.0625rem;
+  background: linear-gradient(100deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
 }
 .separator-or-div .sp:nth-child(3){
-    width: 12rem;
-    height: 0.0625rem;
-    background: linear-gradient(359deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
+  width: 12rem;
+  height: 0.0625rem;
+  background: linear-gradient(359deg, rgba(143, 143, 143, 0.00) 5.73%, #717171 100%);
 }
 
 
 /* this is for the topbar section.. */
 
 .profile-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    margin-left: 4rem;
-    position: absolute;
-    right: 0%;
-    padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 4rem;
+  position: absolute;
+  right: 0%;
+  padding-right: 1rem;
 }

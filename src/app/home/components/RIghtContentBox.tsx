@@ -1,7 +1,7 @@
 'use client';
 
 import Topbar from '@/app/components/topbar/Topbar'
-import Mainhome from '@/app/pages/Mainhome'
+import Mainhome from '@/app/home/components/Mainhome'
 
 const RightContentBox = () => {
     return (

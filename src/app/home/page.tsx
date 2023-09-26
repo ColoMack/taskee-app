@@ -1,7 +1,11 @@
+'use client';
+
+import RightContentBox from "./components/RIghtContentBox";
+
 export default function name() {
     return(
-        <div>
-            app/dashboard
-        </div>
+        <>
+            <RightContentBox />
+        </>
     );
 }

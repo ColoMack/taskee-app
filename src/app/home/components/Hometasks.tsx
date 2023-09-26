@@ -9,6 +9,8 @@ const Hometasks = () => {
                 <div style={{background:"#fff", borderRadius:"0.6875rem", padding:"2.12rem 1.94rem", height:"30rem"}}>
                     tasks
                 </div>
+
+                helloooo
             </div>
         </>
     );
