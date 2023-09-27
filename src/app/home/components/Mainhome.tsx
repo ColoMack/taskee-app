@@ -1,6 +1,6 @@
 'use client';
 
-import Hometasks from "./sections/Hometasks";
+import Hometasks from "./Hometasks";
 
 const Mainhome = () => {
     return (
