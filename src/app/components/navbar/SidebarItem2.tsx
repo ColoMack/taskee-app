@@ -3,8 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-
-interface SidebarItemProps {
+interface SidebarItemProps2 {
     label: string;
     icon: any;
     href: string;
@@ -12,12 +11,14 @@ interface SidebarItemProps {
     active?: boolean;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({
+const SidebarItem2: React.FC<SidebarItemProps2> = ({
+    
     label,
     icon: Icon,
     href,
     active,
-    onClick
+    onClick,
+
 }) => {
     const handleClick = () => {
         if (onClick) {
@@ -55,4 +56,4 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
     );
 }
  
-export default SidebarItem;
+export default SidebarItem2;

@@ -218,9 +218,7 @@ body{
 }
 
 .sidebar-name{
-  color: rgb(107, 107, 107);
   /* font-family: 'Varela Round', sans-serif; */
-  font-size: 1.15rem;
   font-style: normal;
   /* font-weight: 400; */
   line-height: normal;
@@ -232,7 +230,7 @@ body{
   justify-content: center;
 }
 .logout-cont .sidebar-name{
-  color: rgb(107, 107, 107);
+  /* color: rgb(107, 107, 107); */
 }
 
 /* This is what happens when the sidebar is minimized.. */

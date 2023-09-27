@@ -1,31 +1,19 @@
 'use client';
 
-import useRoutes from "@/app/hooks/useRoutes";
-import { User } from "@prisma/client";
-import { useState } from "react";
-import SidebarItem from "./SidebarItem";
+import useRoutes2 from "@/app/hooks/useRoutes2";
+import SidebarItem2 from "./SidebarItem2";
 
+const Sidebar2 = () => {
 
-interface SidebarProps {
-    // i'll have to use currentUser to get the avatar..
-}
-
-
-
-const Sidebar: React.FC<SidebarProps> = ({
-    
-}) => {
-
-    const routes = useRoutes();
-    const [isOpen, setIsOpen] = useState(false)
+    const routes = useRoutes2();
 
     return (
         <>
             <div className="sidebar-items">
                 <nav>
                     <ul role="list">
-                        {routes.map((item?) => (
-                            <SidebarItem 
+                        {routes.map((item) => (
+                            <SidebarItem2
                                 key={item.label}
                                 href={item.href}
                                 label={item.label}
@@ -33,6 +21,8 @@ const Sidebar: React.FC<SidebarProps> = ({
                                 active={item.active}
                                 // onClick={item.onClick}
                             />
+
+                            
                         ))}
                     </ul>
                 </nav>
@@ -41,4 +31,4 @@ const Sidebar: React.FC<SidebarProps> = ({
     );
 }
  
-export default Sidebar;
+export default Sidebar2;

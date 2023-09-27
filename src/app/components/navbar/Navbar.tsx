@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 import Sidebar from "./Sidebar";
+import Sidebar2 from "./Sidebar2";
 
 const Navbar = () => {
 
@@ -44,6 +45,12 @@ const Navbar = () => {
 
                 <Sidebar />
 
+                <div style={{ width:"100%", display:"flex", justifyContent:"center", margin:"1rem 0 0 0" }}>
+                    <div className="horizontal-line"></div>
+                </div>
+
+                <Sidebar2 />
+
                 {/* list of the menu options.. */}
                 {/* <ul className="sidebar-items">
                     
@@ -81,10 +88,11 @@ const Navbar = () => {
                     </div>    
                 </ul> */}
             </div>
+            
 
-            <div style={{ width:"100%", display:"flex", justifyContent:"center", margin:"1rem 0 0 0" }}>
+            {/* <div style={{ width:"100%", display:"flex", justifyContent:"center", margin:"1rem 0 0 0" }}>
                 <div className="horizontal-line"></div>
-            </div>
+            </div> */}
 
             <div style={{ width:"100%"}}>
                 <ul className="sidebar-items">

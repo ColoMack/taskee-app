@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
-import { signOut } from "next-auth/react";
 
 // Icons that will be used in the navigation sidebar..
 import {LuLayoutDashboard}  from 'react-icons/lu'
@@ -30,7 +29,7 @@ const useRoutes = () => {
             href: '/notifications',
             icon: IoMdNotificationsOutline,
             active: pathname === '/notifications'
-        }
+        },
 
     ], [pathname]);
 
