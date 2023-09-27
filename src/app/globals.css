@@ -230,7 +230,10 @@ body{
   justify-content: center;
 }
 .logout-cont .sidebar-name{
-  /* color: rgb(107, 107, 107); */
+  color: rgb(107, 107, 107);
+}
+.sidebar-link:hover{
+  background: #ebf3fc;
 }
 
 /* This is what happens when the sidebar is minimized.. */

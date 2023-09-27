@@ -96,7 +96,19 @@ const Navbar = () => {
 
             <div style={{ width:"100%"}}>
                 <ul className="sidebar-items">
-                    <div>
+                    {/* For the logout button.. */}
+                    <div style={{marginRight: "0rem"}} className="sidebar-items logout-cont">
+                        <button onClick={() => signOut()} className="sidebar-link">
+                            <div  className="sidebar-item-container">
+                                <span className="sidebar-icon">
+                                    <Image src="/images/logoutIcon.svg" height={35} width={35} alt="Logout" />  
+                                </span>
+                                <span className="sidebar-name">Logout</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    {/* <div>
                         <a href="/" className="sidebar-link">
                             <div style={{margin:"0 0 0 20px"}} className="sidebar-item-container">
                                 <span className="sidebar-icon">
@@ -116,19 +128,9 @@ const Navbar = () => {
                                 <span className="sidebar-button-name">New Task</span>
                             </div>
                         </a>
-                    </div>
+                    </div> */}
                     
-                    {/* For the logout button.. */}
-                    <div style={{marginRight: "0rem"}} className="sidebar-items logout-cont">
-                        <button onClick={() => signOut()} className="sidebar-link">
-                            <div className="sidebar-item-container">
-                                <span className="sidebar-icon">
-                                    <Image src="/images/logoutIcon.svg" height={35} width={35} alt="Logout" />  
-                                </span>
-                                <span className="sidebar-name">Logout</span>
-                            </div>
-                        </button>
-                    </div>
+                    
                 </ul>
             </div>
 

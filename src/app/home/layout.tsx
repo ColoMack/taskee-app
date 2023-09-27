@@ -1,6 +1,5 @@
 'use client';
 
-import RightContentBox from '../components/RIghtContentBox/RIghtContentBox';
 import Navbar from '../components/navbar/Navbar';
 
 
