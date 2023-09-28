@@ -1,6 +1,8 @@
 'use client';
 
 import Navbar from "../components/navbar/Navbar";
+import { Provider } from 'react-redux';
+import store from '../context/store';
 
 const settingsLayout = ({
     children
@@ -8,10 +10,12 @@ const settingsLayout = ({
     children: React. ReactNode
 }) => {
     return (
-        <div className='flex flex-row'>
-            <Navbar />
-            {children}
-        </div>
+        <Provider store={store}>
+            <div className='flex flex-row'>
+                <Navbar />
+                {children}
+            </div>
+        </Provider>
     );
 }
  

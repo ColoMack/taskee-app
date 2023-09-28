@@ -1,6 +1,8 @@
 'use client';
 
 import Navbar from "../components/navbar/Navbar";
+import { Provider } from 'react-redux';
+import store from '../context/store';
 
 export default function Notificationslayout({
     children
@@ -8,9 +10,11 @@ export default function Notificationslayout({
     children: React.ReactNode
 }) {
   return (
-    <div className='flex flex-row'>
+    <Provider store={store}>
+      <div className='flex flex-row'>
         <Navbar />
         {children}
-    </div>
+      </div>
+    </Provider>
   )
 }

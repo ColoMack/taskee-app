@@ -5,7 +5,7 @@ import Mainhome from '@/app/home/components/Mainhome'
 
 const RightContentBox = () => {
     return (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-screen'>
             <Topbar/>
             <Mainhome />
         </div>

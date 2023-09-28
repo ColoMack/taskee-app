@@ -3,6 +3,8 @@ import { Varela_Round } from "next/font/google";
 import ClientOnly from './components/ClientOnly';
 import ToasterContext from './context/ToasterContext';
 import AuthContext from './context/AuthContext';
+import { Provider } from "react-redux";
+import store from './context/store';
 
 // This is the metadata for the whole site..
 export const metadata = {
@@ -27,12 +29,14 @@ export default function RootLayout({
       <html lang="en">
         <body className={font.className}>
           <>
-            <ClientOnly>
-              <AuthContext>
-                <ToasterContext />
-                {children}
-              </AuthContext>
-            </ClientOnly>
+            
+              <ClientOnly>
+                <AuthContext>
+                  <ToasterContext />
+                  {children}
+                </AuthContext>
+              </ClientOnly>
+             
           </>
         </body>
       </html>

@@ -239,7 +239,7 @@ body{
 /* This is what happens when the sidebar is minimized.. */
 [data-collapse = 'true']{
   width: 6rem;
-  transition: width 0.2s ease-in-out;
+  transition: width 0s ease-in-out;
 }
 
 [data-collapse = 'true'] .sidebar-name{

@@ -1,24 +1,33 @@
 'use client'
 
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Container from "../Container";
 import Logo from "./Logo";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 import Sidebar from "./Sidebar";
 import Sidebar2 from "./Sidebar2";
+import { toggleSidebarCollapse } from "@/app/actions/navbarAction";
 
 const Navbar = () => {
 
     // conceptualizing the maximising and minimising of the sidebar..
-    const [isCollapsedSidebar, setIsCollapsedSidebar] = useState<boolean>(false);
+    // const [isCollapsedSidebar, setIsCollapsedSidebar] = useState<boolean>(false);
+
+    // using redux
+    const isSidebarCollapsed = useSelector((state:any) => state.isSidebarCollapsed);
+    const dispatch = useDispatch();
+
 
     const toggleSidebarCollapseHandler = () => {
-        setIsCollapsedSidebar(prev => !prev)
-    }
+        // setIsCollapsedSidebar(prev => !prev)
+
+        dispatch(toggleSidebarCollapse());
+    };
 
     return (
-        <div className="navbar-div" data-collapse = {isCollapsedSidebar}>
+        <div className="navbar-div" data-collapse = {isSidebarCollapsed}>
             {/* This is the container for the taskee logo */}
             <div style={{ border:"none 1px", width: "100%",height:"fit-content", display:"flex" }}>
                 <Container>
@@ -134,10 +143,6 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            
-            <div>
-                
-            </div>
         </div>
     );
 }
