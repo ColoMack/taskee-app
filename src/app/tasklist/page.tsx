@@ -1,11 +1,9 @@
 'use client';
 
-import RightContentBox from "../home/components/RIghtContentBox";
-
-export default function Tasklistpage() {
+export default function tasklistPage() {
   return (
     <>
-        <RightContentBox />
+      task list page 
     </>
   )
 }

@@ -1,9 +1,11 @@
 'use client';
 
-import React from 'react'
+import NewtaskRightside from "./components/NewtaskRightside";
 
-export default function NewtaskPage() {
+export default function newtaskPage() {
   return (
-    <div>NewtaskPage</div>
+    <>
+      <NewtaskRightside />
+    </>
   )
 }

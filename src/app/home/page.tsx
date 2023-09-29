@@ -1,11 +1,11 @@
 'use client';
 
-import RightContentBox from "./components/RIghtContentBox";
+import DashboardRightSide from "./components/DashboardRightSide";
 
 export default function name() {
     return(
         <>
-            <RightContentBox />
+            <DashboardRightSide />
         </>
     );
 }
