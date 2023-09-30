@@ -39,7 +39,6 @@ const NewtaskBtn: React.FC<Newtaskprops> = ({
                     px-5
                     text-[#7AA5D2]
                     mt-[3rem]
-                    border
                     border-2
                     border-[#7AA5D2]
                 `,
