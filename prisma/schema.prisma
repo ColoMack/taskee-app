@@ -55,15 +55,17 @@ model Account {
 
 model Task {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  title String
+  userId String @db.ObjectId
+  taskName String
   description String
-  attachmentURL String
+  priority String
   duedate DateTime
   status String
-  createdAt DateTime
-  updatedAt DateTime
-  priority String
-  userId String @db.ObjectId
+  attachmentURL String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  
 
   // the userId will reference to the id field in the user model..
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -76,8 +78,8 @@ model TaskTag {
   userId String @db.ObjectId
   taskId String @db.ObjectId
   tagname String
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)

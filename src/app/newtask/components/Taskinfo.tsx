@@ -52,6 +52,20 @@ const Taskinfo = () => {
 
                 {errors.taskName?.message && <div className='text-red-400 text-sm'>{errors.taskName?.message}</div>}
             </div>
+
+            <div className='ml-[3.3rem] mt-[1.5rem]'>
+                <label className='text-zinc-500'>Due date:</label>
+                <input className='
+                    cursor-pointer
+                    ml-[0.5rem]
+                    border
+                    border-zinc-300
+                    py-[0.3rem]
+                    px-[0.8rem]
+                '
+                type='date'
+                />
+            </div>
         </div>
     );
 }
