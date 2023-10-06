@@ -226,7 +226,7 @@ const NewTaskList = () => {
                                 </div>
                             </div>
 
-                            <div className="tags">
+                            <div style={{display:'grid',gridTemplateColumns:'repeat(8, 5rem)', rowGap:'50px',columnGap:'50px', gridAutoFlow:'row', gridAutoRows:'min-content'}} className="tags">
                                 {tags.map((tag) => {
                                     return <div className="
                                         flex
