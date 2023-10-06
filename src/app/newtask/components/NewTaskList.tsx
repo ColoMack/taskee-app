@@ -14,6 +14,17 @@ import { BsTag } from 'react-icons/bs'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { AiOutlineClose } from 'react-icons/ai'
 
+// shadcn Ui components
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+  
+
+
 interface InitialStateProps {
     taskName?:string,
     duedate: string,
@@ -138,8 +149,35 @@ const NewTaskList = () => {
                             type='date'
                             /> */}
                         </div>
+                        
+                        {/* select tag for the task reminder */}
+                        <div className="ml-[3.3rem] mt-[1.5rem]">
+                            <Select>
+                                <SelectTrigger className="w-[180px]">
+                                    <SelectValue placeholder="Set Reminder" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="dueDateTime">At time of due date</SelectItem>
+                                    <SelectItem value="30minBefore">30 Minutes Before</SelectItem>
+                                    <SelectItem value="1hrBefore">1 Hour Before</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
 
                         {/* should use the select tag for the 'priority' input */}
+                        <div className="ml-[3.3rem] mt-[1.5rem]">
+                            <Select>
+                                <SelectTrigger className="w-[180px]">
+                                    <SelectValue placeholder="Priority" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="highPriority">High Priority</SelectItem>
+                                    <SelectItem value="mediumPriority">Medium Priority</SelectItem>
+                                    <SelectItem value="lowPriority">Low Priority</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+                            
                     </div> 
                 </section>
 
