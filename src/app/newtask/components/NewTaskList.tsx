@@ -294,11 +294,15 @@ const NewTaskList = () => {
                 <section>
                     <div className="flex justify-center">
                         <button className="
-                            border
-                            border-zinc-300
+                            bg-[#5082b8]
+                            border-2
+                            border-[#5082b8]
                             py-[0.7rem]
                             px-[1rem]
                             rounded-md
+                            text-white
+                            hover:bg-white
+                            hover:text-[#5082b8]
                         " 
                         type="submit">Add Task</button>
                     </div>
